@@ -12,7 +12,7 @@ set(CMAKE_HIP_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 include(${PROJECT_SOURCE_DIR}/cmake/LoadHIP.cmake)
-# include(${PROJECT_SOURCE_DIR}/cmake/FetchComposableKernel.cmake)
+include(${PROJECT_SOURCE_DIR}/cmake/FetchComposableKernel.cmake)
 
 hip_add_library(blocksparse_attn INTERFACE)
 

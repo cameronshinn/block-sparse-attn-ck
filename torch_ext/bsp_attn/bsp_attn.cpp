@@ -1,5 +1,3 @@
-#pragma once
-
 #include <hip/hip_runtime.h>
 #include <torch/torch.h>
 #include <torch/extension.h>
