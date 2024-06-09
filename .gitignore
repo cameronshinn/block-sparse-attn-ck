@@ -1,5 +1,7 @@
 _skbuild/
+__pycache__/
 dist/
 externals/
+.vscode/
 *.egg-info
 *.egg

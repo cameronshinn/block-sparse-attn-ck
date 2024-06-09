@@ -18,12 +18,13 @@ setup(
     description="block-sparse multi-head attention layer for PyTorch",
     license="MIT",
     packages=['bsp_attn'],  # These are the names you import the package as, and must match folder names?
-    cmake_install_target='bsp_attn_ext',
+    # cmake_install_target='bsp_attn_ext',
     cmake_languages=['C', 'CXX', 'HIP'],
     cmake_args=[
         f'-DCMAKE_PREFIX_PATH={TORCH_ROOT};/opt/rocm',
         '-DCMAKE_CXX_COMPILER=/opt/rocm/bin/hipcc',
         '-DCMAKE_BUILD_TYPE=Release',
-        '-DGPU_TARGETS="gfx90a"'
+        '-DGPU_TARGETS="gfx90a"',  # Specify multiple with semicolon seperator: "gfx90a;gfx906"
+        # '-DINSTANCES_ONLY=ON'
     ]
 )
